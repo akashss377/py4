@@ -103,26 +103,53 @@
 
 
 
-class Base: 
-    def __init__(self): 
-        self.a = "Python is Awesome!"
-        self.__c = "Mashup Stack"
+# class Base: 
+#     def __init__(self): 
+#         self.a = "Python is Awesome!"
+#         self.__c = "Mashup Stack"
   
 # Creating a derived class 
-class Derived(Base): 
-    def __init__(self): 
+# class Derived(Base): 
+#     def __init__(self): 
           
-        # Calling constructor of 
-        # Base class 
-        Base.__init__(self)  
-        print("Calling private member of base class: ") 
-        print(self.__c) 
+#         # Calling constructor of 
+#         # Base class 
+#         Base.__init__(self)  
+#         print("Calling private member of base class: ") 
+#         print(self.__c) 
 # Driver code 
-obj1 = Base() 
-print(obj1.a) 
+# obj1 = Base() 
+# print(obj1.a) 
 
 # raises an AttributeError  
 # print(obj1.__c)
 
 # raises an AttributeError 
-obj2 = Derived()
+# obj2 = Derived()
+
+
+
+# class Mycourse:
+#     def __init__(self  ,course,fees):
+#         self.course = course
+#         self.fees = fees
+#     def final (self):
+#         print(f"my {self.course} price is  {self.fees}")    
+# obj=Mycourse("python",400)
+# obj1=Mycourse("javascript",300)
+# obj.fees = 200
+# del obj1.fees
+# obj.final()
+# obj1.final()      
+        
+class market:
+    def __init__(self,vegitables,fruits):
+        self.vegitables = vegitables
+        self.fruits = fruits
+    def out(self):
+        print(f"{self.vegitables},{self.fruits}")
+class final(market):
+    def __init__(self, vegitables, fruits):
+        market.__init__(vegitables, fruits)
+    
+  
