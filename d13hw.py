@@ -1,0 +1,10 @@
+file = open("students.txt", "a+")
+n = int(input("How many student names do you want to add? "))
+for i in range(n):
+    name = input("Enter student name: ")
+    file.write(name + "\n")
+file.close()
+file = open("students.txt", "r")
+print("Student List:")
+print(file.read())
+file.close()
